@@ -1,0 +1,40 @@
+/* ─── Coding / Software Theme ─────────────────────────────────────────────────
+ * Terminal green on near-black. Scanlines. Monospace everywhere.
+ * The feeling of a late-night coding session, something being built.
+ * ─────────────────────────────────────────────────────────────────────────── */
+
+[data-theme="coding"] {
+  --color-bg:              #0A0F0A;   /* Terminal black — slightly green-tinted */
+  --color-bg-elevated:     #0F160F;
+  --color-bg-subtle:       #080D08;
+  --color-surface:         #111811;
+  --color-surface-hover:   #172017;
+  --color-border:          #1E2E1E;
+  --color-border-subtle:   #162016;
+
+  --color-text:            #C8E6C8;   /* Phosphor green-white */
+  --color-text-secondary:  #6DAF6D;
+  --color-text-subtle:     #3D6B3D;
+  --color-text-inverse:    #0A0F0A;
+
+  --color-accent:          #39FF47;   /* Bright terminal green */
+  --color-accent-subtle:   #0F200F;
+  --color-accent-hover:    #5FFF6B;
+
+  --shadow-sm:    0 1px 3px rgba(0, 0, 0, 0.6), 0 0 1px rgba(57, 255, 71, 0.08);
+  --shadow-md:    0 4px 12px rgba(0, 0, 0, 0.7), 0 0 8px rgba(57, 255, 71, 0.06);
+  --shadow-lg:    0 12px 32px rgba(0, 0, 0, 0.8), 0 0 16px rgba(57, 255, 71, 0.06);
+  --shadow-card:  0 2px 8px rgba(0, 0, 0, 0.6),
+                  0 0 0 1px rgba(57, 255, 71, 0.08),
+                  inset 0 1px 0 rgba(57, 255, 71, 0.05);
+  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.8),
+                       0 0 0 1px rgba(57, 255, 71, 0.25),
+                       0 0 20px rgba(57, 255, 71, 0.08);
+
+  --font-display: 'JetBrains Mono', 'Courier New', monospace;
+  --font-body:    'JetBrains Mono', 'Courier New', monospace;
+
+  --letter-spacing-tight: 0;
+  --letter-spacing-normal: 0.02em;
+  --line-height-normal: 1.6;
+}

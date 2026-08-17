@@ -1,0 +1,13 @@
+/* ─── Story Architect — Theme System ─────────────────────────────────────────
+ * Import order matters: base first, then themes.
+ * The [data-theme] attribute on <html> activates a theme.
+ * During onboarding, data-theme-transitioning="true" enables the
+ * cinematic transition as the world arrives.
+ * ─────────────────────────────────────────────────────────────────────────── */
+
+@import './base.css';
+@import './fiction.css';
+@import './horror.css';
+@import './screenplay.css';
+@import './coding.css';
+@import './game.css';

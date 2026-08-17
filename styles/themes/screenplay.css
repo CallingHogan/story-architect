@@ -1,0 +1,39 @@
+/* ─── Screenplay / Script Theme ───────────────────────────────────────────────
+ * Soundstage black, Hollywood lighting rigs, spot-lit workspace.
+ * The feeling of being on a set late at night, script in hand.
+ * ─────────────────────────────────────────────────────────────────────────── */
+
+[data-theme="screenplay"] {
+  --color-bg:              #0D0D0D;   /* Soundstage black */
+  --color-bg-elevated:     #161616;
+  --color-bg-subtle:       #111111;
+  --color-surface:         #1A1A1A;
+  --color-surface-hover:   #222222;
+  --color-border:          #2A2A2A;
+  --color-border-subtle:   #1F1F1F;
+
+  --color-text:            #F0EDE8;   /* Warm white — like paper under a spotlight */
+  --color-text-secondary:  #A89F94;
+  --color-text-subtle:     #6B635A;
+  --color-text-inverse:    #0D0D0D;
+
+  --color-accent:          #D4A843;   /* Golden stage light */
+  --color-accent-subtle:   #2A2218;
+  --color-accent-hover:    #E8BC55;
+
+  --shadow-sm:    0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md:    0 4px 12px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-lg:    0 12px 32px rgba(0, 0, 0, 0.6), 0 4px 8px rgba(0, 0, 0, 0.4);
+  --shadow-card:  0 2px 8px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.3),
+                  inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.6), 0 2px 6px rgba(0, 0, 0, 0.4),
+                       0 0 0 1px rgba(212, 168, 67, 0.15);
+
+  /* Spotlight glow — used on active/selected states */
+  --shadow-spotlight: 0 0 40px rgba(212, 168, 67, 0.08), 0 0 80px rgba(212, 168, 67, 0.04);
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+
+  --letter-spacing-tight: -0.02em;
+}

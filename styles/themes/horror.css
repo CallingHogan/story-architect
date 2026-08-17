@@ -1,0 +1,38 @@
+/* ─── Horror / Creepypasta Theme ──────────────────────────────────────────────
+ * Dark paper, cool desaturated palette, unsettling grain.
+ * The feeling of reading something you probably shouldn't.
+ * ─────────────────────────────────────────────────────────────────────────── */
+
+[data-theme="horror"] {
+  --color-bg:              #0E0D0C;   /* Near-black with the faintest warm cast */
+  --color-bg-elevated:     #141210;
+  --color-bg-subtle:       #0A0908;
+  --color-surface:         #171513;
+  --color-surface-hover:   #1E1B18;
+  --color-border:          #272320;
+  --color-border-subtle:   #201D1A;
+
+  --color-text:            #D4CFC9;   /* Faded, slightly yellowed white */
+  --color-text-secondary:  #7A7269;
+  --color-text-subtle:     #4A4540;
+  --color-text-inverse:    #0E0D0C;
+
+  --color-accent:          #8B1A1A;   /* Deep dried-blood red */
+  --color-accent-subtle:   #1A0A0A;
+  --color-accent-hover:    #A82020;
+
+  --shadow-sm:    0 1px 3px rgba(0, 0, 0, 0.7);
+  --shadow-md:    0 4px 12px rgba(0, 0, 0, 0.8);
+  --shadow-lg:    0 12px 32px rgba(0, 0, 0, 0.9);
+  --shadow-card:  0 2px 8px rgba(0, 0, 0, 0.7),
+                  inset 0 1px 0 rgba(255, 255, 255, 0.02);
+  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.9),
+                       0 0 0 1px rgba(139, 26, 26, 0.3),
+                       0 0 20px rgba(139, 26, 26, 0.06);
+
+  --font-display: 'Newsreader', Georgia, serif;
+  --font-body:    'Hanken Grotesk', system-ui, sans-serif;
+
+  --letter-spacing-tight: 0.01em;   /* Slightly loose — unsettling */
+  --line-height-normal: 1.7;
+}

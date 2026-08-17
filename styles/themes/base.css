@@ -1,0 +1,139 @@
+/* ─── Story Architect — Design Token System ───────────────────────────────────
+ *
+ * All themes share this structure. The :root defines the neutral/opening state.
+ * Each [data-theme="x"] block overrides tokens to transform the world.
+ *
+ * Tokens are organized as:
+ *   --color-*     Color system
+ *   --font-*      Typography
+ *   --radius-*    Border radius
+ *   --shadow-*    Elevation
+ *   --motion-*    Animation timing
+ *   --texture-*   Background texture references
+ *   --spacing-*   Spacing scale
+ * ─────────────────────────────────────────────────────────────────────────── */
+
+/* Fonts are imported in globals.css to ensure @import precedes all rules */
+
+/* ─── Neutral / Opening State ────────────────────────────────────────────────
+ * Clean, warm, no preconceptions. The blank canvas before the world arrives.
+ * ─────────────────────────────────────────────────────────────────────────── */
+:root {
+  /* Surfaces */
+  --color-bg:              #F7F4EF;   /* Warm off-white — not pure white, not paper */
+  --color-bg-elevated:     #FFFFFF;
+  --color-bg-subtle:       #F0EDE7;
+  --color-surface:         #FFFFFF;
+  --color-surface-hover:   #FAF8F4;
+  --color-border:          #E5E0D8;
+  --color-border-subtle:   #EDE9E3;
+
+  /* Text */
+  --color-text:            #1A1714;   /* Near-black with warmth */
+  --color-text-secondary:  #6B6560;
+  --color-text-subtle:     #9E9893;
+  --color-text-inverse:    #F7F4EF;
+
+  /* Accent — neutral warm gold, transforms per theme */
+  --color-accent:          #C9A84C;
+  --color-accent-subtle:   #F5EDD4;
+  --color-accent-hover:    #B8962E;
+
+  /* State */
+  --color-success:         #4A7C59;
+  --color-warning:         #C9962A;
+  --color-error:           #B5493A;
+
+  /* Typography */
+  --font-display:          'Newsreader', Georgia, serif;
+  --font-body:             'Hanken Grotesk', system-ui, sans-serif;
+  --font-mono:             'JetBrains Mono', 'Courier New', monospace;
+
+  --font-size-xs:          0.75rem;   /* 12px */
+  --font-size-sm:          0.875rem;  /* 14px */
+  --font-size-base:        1rem;      /* 16px */
+  --font-size-lg:          1.125rem;  /* 18px */
+  --font-size-xl:          1.25rem;   /* 20px */
+  --font-size-2xl:         1.5rem;    /* 24px */
+  --font-size-3xl:         1.875rem;  /* 30px */
+  --font-size-4xl:         2.25rem;   /* 36px */
+  --font-size-5xl:         3rem;      /* 48px */
+  --font-size-6xl:         3.75rem;   /* 60px */
+
+  --font-weight-light:     300;
+  --font-weight-regular:   400;
+  --font-weight-medium:    500;
+  --font-weight-semibold:  600;
+
+  --line-height-tight:     1.2;
+  --line-height-snug:      1.35;
+  --line-height-normal:    1.6;
+  --line-height-relaxed:   1.75;
+
+  --letter-spacing-tight:  -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide:   0.04em;
+  --letter-spacing-wider:  0.08em;
+
+  /* Radius */
+  --radius-sm:    4px;
+  --radius-md:    8px;
+  --radius-lg:    12px;
+  --radius-xl:    16px;
+  --radius-full:  9999px;
+
+  /* Shadows */
+  --shadow-sm:    0 1px 3px rgba(26, 23, 20, 0.06), 0 1px 2px rgba(26, 23, 20, 0.04);
+  --shadow-md:    0 4px 12px rgba(26, 23, 20, 0.08), 0 2px 4px rgba(26, 23, 20, 0.04);
+  --shadow-lg:    0 12px 32px rgba(26, 23, 20, 0.10), 0 4px 8px rgba(26, 23, 20, 0.06);
+  --shadow-xl:    0 24px 48px rgba(26, 23, 20, 0.12), 0 8px 16px rgba(26, 23, 20, 0.06);
+  --shadow-card:  0 2px 8px rgba(26, 23, 20, 0.06), 0 1px 3px rgba(26, 23, 20, 0.04);
+  --shadow-card-hover: 0 8px 24px rgba(26, 23, 20, 0.10), 0 2px 6px rgba(26, 23, 20, 0.06);
+
+  /* Motion */
+  --motion-fast:       120ms;
+  --motion-normal:     220ms;
+  --motion-slow:       380ms;
+  --motion-theme:      600ms;   /* Theme transition — slower and more deliberate */
+  --motion-ease:       cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-ease-in:    cubic-bezier(0.4, 0, 1, 1);
+  --motion-ease-out:   cubic-bezier(0, 0, 0.2, 1);
+  --motion-spring:     cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Texture */
+  --texture-bg:        none;   /* Overridden per theme */
+  --texture-opacity:   0;
+
+  /* Spacing scale */
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   20px;
+  --space-6:   24px;
+  --space-8:   32px;
+  --space-10:  40px;
+  --space-12:  48px;
+  --space-16:  64px;
+  --space-20:  80px;
+  --space-24:  96px;
+  --space-32:  128px;
+}
+
+/* ─── Theme Transition ────────────────────────────────────────────────────────
+ * Applied to the root element when a project type is selected.
+ * The world arrives — not instantly, deliberately.
+ * ─────────────────────────────────────────────────────────────────────────── */
+[data-theme-transitioning="true"] {
+  transition:
+    background-color var(--motion-theme) var(--motion-ease),
+    color var(--motion-theme) var(--motion-ease);
+}
+
+[data-theme-transitioning="true"] * {
+  transition:
+    background-color var(--motion-theme) var(--motion-ease),
+    border-color var(--motion-theme) var(--motion-ease),
+    color var(--motion-theme) var(--motion-ease),
+    box-shadow var(--motion-theme) var(--motion-ease);
+}

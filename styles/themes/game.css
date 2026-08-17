@@ -1,0 +1,43 @@
+/* ─── Game Design Theme ────────────────────────────────────────────────────────
+ * Blueprint lines on deep navy. Technical, spatial, world-building energy.
+ * The feeling of designing a world from the inside out.
+ * ─────────────────────────────────────────────────────────────────────────── */
+
+[data-theme="game"] {
+  --color-bg:              #0D1520;   /* Deep blueprint navy */
+  --color-bg-elevated:     #111C2A;
+  --color-bg-subtle:       #0A1019;
+  --color-surface:         #132030;
+  --color-surface-hover:   #1A2B3F;
+  --color-border:          #1E3248;
+  --color-border-subtle:   #172840;
+
+  --color-text:            #E8F0F8;   /* Cool near-white */
+  --color-text-secondary:  #7A9AB8;
+  --color-text-subtle:     #4A6880;
+  --color-text-inverse:    #0D1520;
+
+  --color-accent:          #4D9FEC;   /* Blueprint line blue */
+  --color-accent-subtle:   #0D1E30;
+  --color-accent-hover:    #6FB3F5;
+
+  /* Blueprint grid — faint lines suggesting a design document */
+  --texture-bg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M 40 0 L 0 0 0 40' fill='none' stroke='rgba(77,159,236,0.06)' stroke-width='1'/%3E%3C/svg%3E");
+  --texture-opacity: 1;
+
+  --shadow-sm:    0 1px 3px rgba(0, 0, 0, 0.5), 0 0 1px rgba(77, 159, 236, 0.1);
+  --shadow-md:    0 4px 12px rgba(0, 0, 0, 0.6), 0 0 8px rgba(77, 159, 236, 0.08);
+  --shadow-lg:    0 12px 32px rgba(0, 0, 0, 0.7), 0 0 16px rgba(77, 159, 236, 0.08);
+  --shadow-card:  0 2px 8px rgba(0, 0, 0, 0.5),
+                  0 0 0 1px rgba(77, 159, 236, 0.1),
+                  inset 0 1px 0 rgba(77, 159, 236, 0.06);
+  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.7),
+                       0 0 0 1px rgba(77, 159, 236, 0.3),
+                       0 0 24px rgba(77, 159, 236, 0.1);
+
+  --font-display: 'Inter', system-ui, sans-serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+
+  --letter-spacing-tight: -0.01em;
+  --font-weight-medium: 500;
+}
